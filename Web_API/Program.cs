@@ -16,6 +16,10 @@ builder.Services.AddDbContext<AplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+#region [Cors]
+builder.Services.AddCors();
+#endregion
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,6 +28,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors( c =>
+{
+    c.AllowAnyHeader();
+    c.AllowAnyMethod();
+    c.AllowAnyOrigin();
+}
+);
 
 app.UseHttpsRedirection();
 
