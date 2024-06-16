@@ -28,7 +28,7 @@ namespace Web_API.Controllers
             return Ok(serviceResponse);
         }
 
-        [HttpPost("CreateFuncionario")]
+        [HttpPost]
         public async Task<ActionResult<ServiceResponse<List<FuncionarioModel>>>> CreateFuncionario(FuncionarioModel novoFuncionario)
         {
             return Ok(await _funcionarioInterface.CreateFuncionario(novoFuncionario));

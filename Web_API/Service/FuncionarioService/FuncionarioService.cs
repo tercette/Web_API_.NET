@@ -95,6 +95,7 @@ namespace Web_API.Service.FuncionarioService
                 {
                     serviceResponse.Mensagem = "Nenhum dado retornou";
                 }
+                serviceResponse.Mensagem = "Aquisicao de dados bem sucedida!";
             }
             catch (Exception ex)
             {
