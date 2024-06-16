@@ -10,6 +10,7 @@ namespace Web_API.Enum
         Compras,
         Atendimento,
         Zeladoria,
-        Vendas
+        Vendas,
+        Diretoria
     }
 }
